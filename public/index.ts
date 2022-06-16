@@ -34,12 +34,12 @@ validatorToggler.addEventListener("click", () => {
   }
 });
 
-const lunaStakeBtn = document.getElementById("lunaStakeBtn") as HTMLDivElement;
+const axlStakeBtn = document.getElementById("axlStakeBtn") as HTMLDivElement;
 const osmoStakeBtn = document.getElementById("osmoStakeBtn") as HTMLDivElement;
 
-lunaStakeBtn.addEventListener("click", () => {
+axlStakeBtn.addEventListener("click", () => {
   window.open(
-    "https://station.terra.money/validator/terravaloper1d3fv2cjukt0e6lrzd8d857jatlkht7wcp85zar"
+    "https://wallet.keplr.app/#/axelar/stake?modal=detail&validator=axelarvaloper16d6dhjl8r3h9yggxlnr8va9k3l8kjvry40c3ug"
   );
 });
 
