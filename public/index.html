@@ -21,6 +21,7 @@
         margin: 0 auto;
         display: flex;
         flex-direction: column;
+        overflow-y: scroll;
       }
       a {
         text-decoration: none;
@@ -138,18 +139,18 @@
       <div class="mr-auto">
         <span id="aboutToggler">About</span>
       </div>
-      <div class="ml-auto">
+      <div class="ml-auto mr-auto">
         <span id="validatorToggler" class="selectable">Validator</span>
+      </div>
+      <div class="ml-auto">
+        <span id="votesToggler" class="selectable">Votes</span>
       </div>
     </div>
 
-    <div id="profile">
-      <img id="aboutImg" class="ml-auto mr-auto" src="images/about.png" />
-      <img id="validatorLeftImg" class="mr-auto" src="images/validator-left.png" style="display: none;" />
-      <img id="validatorRightImg" class="ml-auto" src="images/validator-right.png" style="display: none;" />
-    </div>
-
     <div id="aboutTab">
+      <div id="profile">
+        <img id="aboutImg" class="ml-auto mr-auto" src="images/about.png" />
+      </div>
       <p style="font-size: 1.68rem">
         <b>Hello 👋 I am Larry</b>
       </p>
@@ -239,7 +240,7 @@
 
     <div id="validatorTab" style="display: none">
       <p style="font-size: 1.68rem">
-        <b>Validator 🥩 operations</b>
+        <b>🥩 Validator operations</b>
       </p>
       <div class="mt-3 mb-2" style="font-size: 1.2rem">
         <b>✅ Multi-party signer setup</b>
@@ -266,8 +267,9 @@
       </div>
       <div class="mt-1 mb-2">
         I provided relayer service facilitating majority of cross-chain traffic involving Terra
-        Classic <b>(UPDATE: I have paused relayer operations indefinitely since the Terra Classic
-        depeg event)</b>
+        Classic<br />
+        <b>UPDATE: I have paused relayer operations indefinitely since the Terra Classic
+        depeg event</b>
       </div>
       <div class="mt-3 mb-2" style="font-size: 1.2rem">
         <b>🔥 Delegate to me!</b>
@@ -283,6 +285,12 @@
       <br />
       <br />
       <br />
+    </div>
+
+    <div id="votesTab" style="display: none">
+      <p style="font-size: 1.68rem">
+        <b>⚖️ Governance votes</b>
+      </p>
     </div>
 
     <div id="footer" class="text-center">

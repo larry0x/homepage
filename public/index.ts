@@ -1,36 +1,54 @@
 const aboutToggler = document.getElementById("aboutToggler") as HTMLSpanElement;
-const aboutImg = document.getElementById("aboutImg") as HTMLImageElement;
 const aboutTab = document.getElementById("aboutTab") as HTMLDivElement;
 const validatorToggler = document.getElementById("validatorToggler") as HTMLSpanElement;
-const validatorLeftImg = document.getElementById("validatorLeftImg") as HTMLImageElement;
-const validatorRightImg = document.getElementById("validatorRightImg") as HTMLImageElement;
 const validatorTab = document.getElementById("validatorTab") as HTMLDivElement;
+const votesToggler = document.getElementById("votesToggler") as HTMLSpanElement;
+const votesTab = document.getElementById("votesTab") as HTMLDivElement;
 
-let currentTab: "about" | "validator" = "about";
+let currentTab: "about" | "validator" | "votes" = "about";
 
 aboutToggler.addEventListener("click", () => {
-  if (currentTab === "validator") {
+  if (currentTab !== "about") {
     currentTab = "about";
+
     aboutToggler.classList.remove("selectable");
-    aboutImg.style.display = "block";
     aboutTab.style.display = "block";
+
     validatorToggler.classList.add("selectable");
-    validatorLeftImg.style.display = "none";
-    validatorRightImg.style.display = "none";
     validatorTab.style.display = "none";
+
+    votesToggler.classList.add("selectable");
+    votesTab.style.display = "none";
   }
 });
 
 validatorToggler.addEventListener("click", () => {
-  if (currentTab === "about") {
+  if (currentTab !== "validator") {
     currentTab = "validator";
+
     aboutToggler.classList.add("selectable");
-    aboutImg.style.display = "none";
     aboutTab.style.display = "none";
+
     validatorToggler.classList.remove("selectable");
-    validatorLeftImg.style.display = "block";
-    validatorRightImg.style.display = "block";
     validatorTab.style.display = "block";
+
+    votesToggler.classList.add("selectable");
+    votesTab.style.display = "none";
+  }
+});
+
+votesToggler.addEventListener("click", () => {
+  if (currentTab !== "votes") {
+    currentTab = "votes";
+
+    aboutToggler.classList.add("selectable");
+    aboutTab.style.display = "none";
+
+    validatorToggler.classList.add("selectable");
+    validatorTab.style.display = "none";
+
+    votesToggler.classList.remove("selectable");
+    votesTab.style.display = "block";
   }
 });
 
