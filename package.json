@@ -4,8 +4,8 @@
   "author": "larry <gm@larry.engineer>",
   "license": "UNLICENSED",
   "scripts": {
-    "build": "rm -rfv dist && npx parcel build public/index.html --public-url /",
-    "serve": "npx parcel public/index.html"
+    "build": "rm -rfv dist && npx parcel build src/index.html --public-url /",
+    "serve": "npx parcel src/index.html"
   },
   "dependencies": {
     "ts-node": "^10.9.1"
