@@ -59,3 +59,7 @@ osmoStakeBtn.addEventListener("click", () => {
     "https://www.mintscan.io/osmosis/validators/osmovaloper1zlymlax05tg9km9jyw496jx60v86m454a3xf3m"
   );
 });
+
+document.onload = () => {
+  votesToggler.click();
+};
