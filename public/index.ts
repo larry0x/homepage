@@ -34,17 +34,10 @@ validatorToggler.addEventListener("click", () => {
   }
 });
 
-const axlStakeBtn = document.getElementById("axlStakeBtn") as HTMLDivElement;
 const osmoStakeBtn = document.getElementById("osmoStakeBtn") as HTMLDivElement;
-
-axlStakeBtn.addEventListener("click", () => {
-  window.open(
-    "https://wallet.keplr.app/#/axelar/stake?modal=detail&validator=axelarvaloper16d6dhjl8r3h9yggxlnr8va9k3l8kjvry40c3ug"
-  );
-});
 
 osmoStakeBtn.addEventListener("click", () => {
   window.open(
-    "https://wallet.keplr.app/#/osmosis/stake?modal=detail&validator=osmovaloper1zlymlax05tg9km9jyw496jx60v86m454a3xf3m"
+    "https://www.mintscan.io/osmosis/validators/osmovaloper1zlymlax05tg9km9jyw496jx60v86m454a3xf3m"
   );
 });

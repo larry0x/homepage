@@ -5,8 +5,11 @@
     <meta charset="utf-8" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" />
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
+    />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
     <style>
       body {
         font-family: "Varela Round", sans-serif;
@@ -159,7 +162,8 @@
       <div class="mb-1">
         • <b>Mars</b> is a lending/borrowing protocol:
         <a href="https://github.com/mars-protocol/hub">Hub blockchain</a>,
-        <a href="https://github.com/mars-protocol/hub-contracts">Hub smart contracts</a>,
+        <a href="https://github.com/mars-protocol/outposts">core smart contracts</a>,
+        <a href="https://github.com/mars-protocol/hub-periphery">peripheral contracts</a>,
         <a href="https://github.com/mars-protocol/fields-of-mars">Fields of Mars</a>,
         <a href="https://github.com/mars-protocol/cw-asset">cw-asset library</a>
       </div>
@@ -167,48 +171,75 @@
         • <b>Steak</b> is a liquid staking derivative for Cosmos SDK chains:
         <a href="https://github.com/st4k3h0us3/steak-contracts">contracts</a>,
         <a href="https://github.com/st4k3h0us3/steak-webapp">webapp</a>,
-        <a href="https://github.com/st4k3h0us3/multiquery">multiquery</a>
+        <a href="https://github.com/st4k3h0us3/multiquery">on-chain query batcher contract</a>
       </div>
       <div class="mt-3 mb-2" style="font-size: 1.2rem">
         <b>✅ Contents</b>
       </div>
       <div class="mb-1">
-        • <a href="https://github.com/st4k3h0us3/workshops/tree/main/how-to-run-a-validator">How to run a validator for Cosmos chains</a>,
-        SparkIBC, June 25, 2022
+        •
+        Mars protocol interactive code review – session #2, airdrop in action & overview of the vesting contract, July 15, 2022.
+        <a href="https://www.youtube.com/watch?v=VeRMEtyLxyk">
+          [recording]
+        </a>
+        <a href="https://mars-protocol.medium.com/mars-protocol-code-review-breakdown-session-2-airdrop-contract-in-action-overview-of-the-8cb91f3682c6">
+          [breakdown]
+        </a>
       </div>
       <div class="mb-1">
-        • <a href="https://forum.marsprotocol.io/t/a-generalized-credit-protocol-utilizing-mars-lending-market/598">A generalized credit protocol utilizing Mars lending market</a>,
-        Mars protocol forum, June 24, 2022
+        •
+        Mars protocol interactive code review – session #1, airdrop contract, July 9, 2022.
+        <a href="https://www.youtube.com/watch?v=FRRPslvVfpc">
+          [recording]
+        </a>
+        <a href="https://mars-protocol.medium.com/mars-protocol-code-review-breakdown-session-1-airdrop-contract-635574bdcecb">
+          [breakdown]
+        </a>
       </div>
       <div class="mb-1">
-        • <a href="https://forum.marsprotocol.io/t/an-overview-of-a-potential-mars-hub-architecture/559">An overview of a potential Mars Hub architecture</a>,
-        Mars protocol forum, May 31, 2022
+        •
+        <a href="https://github.com/st4k3h0us3/workshops/tree/main/how-to-run-a-validator"
+          >How to run a validator for Cosmos chains</a
+        >, SparkIBC, June 25, 2022
       </div>
       <div class="mb-1">
-        • <a href="https://github.com/st4k3h0us3/workshops/tree/main/how-to-do-integrations-tests">How to do CosmWasm integration tests</a>,
-        Terra Spacecamp 2021, Aug 24 2021
+        •
+        <a
+          href="https://forum.marsprotocol.io/t/a-generalized-credit-protocol-utilizing-mars-lending-market/598"
+          >A generalized credit protocol utilizing Mars lending market</a
+        >, Mars protocol forum, June 24, 2022
+      </div>
+      <div class="mb-1">
+        •
+        <a
+          href="https://forum.marsprotocol.io/t/an-overview-of-a-potential-mars-hub-architecture/559"
+          >An overview of a potential Mars Hub architecture</a
+        >, Mars protocol forum, May 31, 2022
+      </div>
+      <div class="mb-1">
+        •
+        <a href="https://github.com/st4k3h0us3/workshops/tree/main/how-to-do-integrations-tests"
+          >How to do CosmWasm integration tests</a
+        >, Terra Spacecamp 2021, Aug 24 2021
       </div>
       <div class="mt-3 mb-2" style="font-size: 1.2rem">
         <b>✅ Validator operation</b>
       </div>
       <p>
-        I operate validators and IBC relayers for
-        <a href="https://axelarscan.io/validator/axelarvaloper16d6dhjl8r3h9yggxlnr8va9k3l8kjvry40c3ug">
-          Axelar
-        </a> and
+        I operate validators for the
         <a href="https://www.mintscan.io/osmosis/validators/osmovaloper1zlymlax05tg9km9jyw496jx60v86m454a3xf3m">
           Osmosis
         </a>
-        networks
+        network
         <br />
         <br />
         <br />
       </p>
     </div>
 
-    <div id="validatorTab" style="display: none;">
+    <div id="validatorTab" style="display: none">
       <p style="font-size: 1.68rem">
-        <b>Stakehouse 🥩 Validator</b>
+        <b>Validator 🥩 operations</b>
       </p>
       <div class="mt-3 mb-2" style="font-size: 1.2rem">
         <b>✅ Multi-party signer setup</b>
@@ -222,34 +253,31 @@
       <div class="mt-3 mb-2" style="font-size: 1.2rem">
         <b>✅ High uptime</b>
       </div>
+      <div class="mt-1 mb-2">My uptime has historically rivalled institutional validators</div>
+      <div class="mt-3 mb-2" style="font-size: 1.2rem">
+        <b>✅ Governance participation</b>
+      </div>
       <div class="mt-1 mb-2">
-        My uptime has historically rivalled institutional validators
+        I provide transparent communications on my governance votes. Click the "votes" tab at the
+        top of the page for more
       </div>
       <div class="mt-3 mb-2" style="font-size: 1.2rem">
         <b>✅ IBC relaying</b>
       </div>
       <div class="mt-1 mb-2">
-        I provide relayer service facilitating majority of Terra&lt;&gt;Osmosis cross-chain traffic
+        I provided relayer service facilitating majority of cross-chain traffic involving Terra
+        Classic <b>(UPDATE: I have paused relayer operations indefinitely since the Terra Classic
+        depeg event)</b>
       </div>
       <div class="mt-3 mb-2" style="font-size: 1.2rem">
         <b>🔥 Delegate to me!</b>
       </div>
-      <div class="mt-1 mb-2" style="display: flex;">
-        <span id="axlStakeBtn" class="button">
-          <div>
-            <img src="images/axl.png" style="margin-right: 0.5rem;">
-          </div>
-          <div>
-            Stake $AXL
-          </div>
-        </span>
+      <div class="mt-1 mb-2" style="display: flex">
         <span id="osmoStakeBtn" class="button">
           <div>
-            <img src="images/osmo.png" style="margin-right: 0.5rem;">
+            <img src="images/osmo.png" style="margin-right: 0.5rem" />
           </div>
-          <div>
-            Stake $OSMO
-          </div>
+          <div>Stake $OSMO</div>
         </span>
       </div>
       <br />
