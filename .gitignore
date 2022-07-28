@@ -4,6 +4,7 @@ node_modules/
 # parcel
 .parcel-cache/
 dist/
+dist-votes/
 
 # macOS
 .DS_Store

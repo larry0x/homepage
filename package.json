@@ -4,7 +4,8 @@
   "author": "larry <gm@larry.engineer>",
   "license": "UNLICENSED",
   "scripts": {
-    "build": "rm -rfv dist && npx parcel build src/*.html --public-url /",
+    "build": "rm -rfv dist && npx parcel build src/index.html --public-url /",
+    "build-votes": "rm -rfv dist-votes && npx parcel build src/vote*.html --public-url /votes --dist-dir dist-votes",
     "serve": "npx parcel src/index.html"
   },
   "dependencies": {
